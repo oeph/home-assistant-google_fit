@@ -81,25 +81,26 @@ def _today_dataset_end():
 
 
 def _get_client(token_file):
-    """Get the Google Fit service with the storage file token.
-        Args:
-        token_file: str, File path for API token.
+    """
+    Get the Google Fit service with the storage file token.
+    Args:
+    token_file: str, File path for API token.
 
-        Return:
-        Google Fit API client.
-        """
+    Return:
+    Google Fit API client.
+    """
     import httplib2
-     from googleapiclient import discovery as google_discovery
-      from oauth2client import file as oauth2file
+    from googleapiclient import discovery as google_discovery
+    from oauth2client import file as oauth2file
 
-       if not os.path.isfile(token_file):
-            return
+    if not os.path.isfile(token_file):
+        return
 
-        credentials = oauth2file.Storage(token_file).get()
-        http = credentials.authorize(httplib2.Http())
-        service = google_discovery.build(
-            'fitness', API_VERSION, http=http, cache_discovery=False)
-        return service
+    credentials = oauth2file.Storage(token_file).get()
+    http = credentials.authorize(httplib2.Http())
+    service = google_discovery.build(
+        'fitness', API_VERSION, http=http, cache_discovery=False)
+    return service
 
 
 def setup(hass, config):
