@@ -1,0 +1,1 @@
+"""Google Fit Component."""
