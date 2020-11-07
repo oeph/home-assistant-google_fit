@@ -347,7 +347,7 @@ class GoogleFitWeightSensor(GoogleFitSensor):
             self._last_updated = round(last_time_update / 1000)
             self._state = last_weight
             _LOGGER.debug("Last weight %s", last_weight)
-            self._attributes = {}
+        self._attributes = {}
 
 
 class GoogleFitHeightSensor(GoogleFitSensor):
@@ -405,7 +405,7 @@ class GoogleFitHeightSensor(GoogleFitSensor):
             self._last_updated = round(last_time_update / 1000)
             self._state = last_height
             _LOGGER.debug("Last height %s", last_height)
-            self._attributes = {}
+        self._attributes = {}
 
 
 class GoogleFitHeartRateSensor(GoogleFitSensor):
