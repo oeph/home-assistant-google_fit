@@ -1,6 +1,6 @@
 # Home-Assistant: Google Fit Sensor Component
 
-Based on, with small fixes:
+Based on
 
 - <https://github.com/cyberjunky/home-assistant-google_fit>
 - <https://github.com/zewelor/ha_custom_components/tree/master/google_fit>
@@ -25,7 +25,7 @@ Sensor is designed to be flexible and allow customization to add New Google Fit 
 
 ## HACS - Recommended
 - Have [HACS](https://hacs.xyz) installed, this will allow you to easily update.
-- Add `http://kelso:10080/oeph/google_fit` as a [custom repository](https://hacs.xyz/docs/navigation/repository) with Type: Integration
+- Add `https://github.com/oeph/home-assistant-google_fit` as a [custom repository](https://hacs.xyz/docs/navigation/repository) with Type: Integration
 - Click Install under "Google Fit" integration.
 - Restart Home-Assistant.
 
