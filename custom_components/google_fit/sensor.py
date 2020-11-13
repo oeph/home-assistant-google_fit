@@ -613,7 +613,7 @@ class GoogleFitSleepSensor(GoogleFitSensor):
     @property
     def unit_of_measurement(self):
         """Returns the unit of measurement."""
-        return SLEEP
+        return 's'
 
     @property
     def icon(self):
@@ -666,7 +666,7 @@ class GoogleFitSleepSensor(GoogleFitSensor):
             total_light_sleep = sum(light_sleep, timedelta())
             state_dict = dict({'bed_time': str(bed_time), 'wake_up_time': str(wake_up_time), 'sleep': str(
                 total_sleep), 'deep_sleep': str(total_deep_sleep), 'light_sleep': str(total_light_sleep)})
-            self._state = int(total_sleep.total_seconds() * 1000)
+            self._state = int(total_sleep.total_seconds())
             self._attributes = state_dict
             self._last_updated = time.time()
         else:
