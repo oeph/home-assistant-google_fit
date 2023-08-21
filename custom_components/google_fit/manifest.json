@@ -1,6 +1,7 @@
 {
   "domain": "google_fit",
   "name": "Google Fit",
+  "version": "1.0.0",
   "documentation": "http://kelso:10080/oeph/google_fit",
   "dependencies": [],
   "codeowners": [
